@@ -1,3 +1,3 @@
 # special-hashing-algorithms
 
-![400px-SHA-2 svg](https://github.com/ataryan4561/special-hashing-algorithms/assets/43813061/06619e24-3968-4bdb-9887-4d8da7caae38)
+![download](https://github.com/ataryan4561/secure-hashing-algorithms/assets/43813061/05763d79-6b0e-4d6c-9533-9c50509caf47)
