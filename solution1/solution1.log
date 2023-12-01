@@ -1,0 +1,800 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from sha256/main.c:1:
+sha256/main.c:65:172: error: use of undeclared identifier 'k'
+        t1 = h + ((((e) >> (6)) | ((e) << (32 - (6)))) ^ (((e) >> (11)) | ((e) << (32 - (11)))) ^ (((e) >> (25)) | ((e) << (32 - (25))))) + (((e) & (f)) ^ (~(e) & (g))) + k[i] + w[i];
+                                                                                                                                                                           ^
+sha256/main.c:168:42: error: use of undeclared identifier 'message'
+    sha256_update(&ctx, (const uint8_t *)message, strlen(message));
+                                         ^
+2 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from sha256/main.c:1:
+sha256/main.c:65:172: error: use of undeclared identifier 'k'
+        t1 = h + ((((e) >> (6)) | ((e) << (32 - (6)))) ^ (((e) >> (11)) | ((e) << (32 - (11)))) ^ (((e) >> (25)) | ((e) << (32 - (25))))) + (((e) & (f)) ^ (~(e) & (g))) + k[i] + w[i];
+                                                                                                                                                                           ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 184.676 ; gain = 94.332
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 184.676 ; gain = 94.332
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:46 . Memory (MB): peak = 184.676 ; gain = 94.332
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main' (sha256/main.c:167) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha256_update' into 'main' (sha256/main.c:168) automatically.
+ERROR: [SYNCHK 200-72] sha256/main.c:168: unsupported c/c++ library function 'strlen'.
+ERROR: [SYNCHK 200-22] sha256/main.c:101: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+INFO: [SYNCHK 200-10] 2 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 184.105 ; gain = 92.594
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 184.105 ; gain = 92.594
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 184.105 ; gain = 92.594
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main' (sha256/main.c:199) automatically.
+INFO: [XFORM 203-602] Inlining function 'calculateStringLength' into 'main' (sha256/main.c:200) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha256_update' into 'main' (sha256/main.c:200) automatically.
+ERROR: [SYNCHK 200-22] sha256/main.c:150: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 184.230 ; gain = 93.809
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 184.230 ; gain = 93.809
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 184.230 ; gain = 93.809
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main' (sha256/main.c:199) automatically.
+INFO: [XFORM 203-602] Inlining function 'calculateStringLength' into 'main' (sha256/main.c:200) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha256_update' into 'main' (sha256/main.c:200) automatically.
+ERROR: [SYNCHK 200-22] sha256/main.c:150: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+WARNING: [HLS 200-40] In file included from sha256/main.c:1:
+sha256/main.c:150:16: warning: passing 'const int *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types]
+        memset((const*)ctx->data,0,56);
+               ^~~~~~~~~~~~~~~~~
+D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:42:23: note: passing argument to parameter '_Dst' here
+  void * memset(void *_Dst,int _Val,size_t _Size);
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.109 ; gain = 93.574
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.109 ; gain = 93.574
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 185.109 ; gain = 93.574
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main' (sha256/main.c:199) automatically.
+INFO: [XFORM 203-602] Inlining function 'calculateStringLength' into 'main' (sha256/main.c:200) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha256_update' into 'main' (sha256/main.c:200) automatically.
+ERROR: [SYNCHK 200-22] sha256/main.c:150: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main' (sha256/main.c:199) automatically.
+INFO: [XFORM 203-602] Inlining function 'calculateStringLength' into 'main' (sha256/main.c:200) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha256_update' into 'main' (sha256/main.c:200) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [XFORM 203-102] Partitioning array 'ctx.state' (sha256/main.c:196) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (sha256/main.c:68)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:26 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:27 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.527 seconds; current allocated memory: 131.883 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.038 seconds; current allocated memory: 132.540 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 132.820 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.612 seconds; current allocated memory: 133.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 133.488 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.294 seconds; current allocated memory: 134.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 134.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.439 seconds; current allocated memory: 134.287 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 0.702 seconds; current allocated memory: 135.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 0.62 seconds; current allocated memory: 136.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 0.467 seconds; current allocated memory: 137.601 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'p_str' will not be exposed as RTL port.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [HLS 200-111]  Elapsed time: 1.093 seconds; current allocated memory: 138.333 MB.
+INFO: [RTMG 210-279] Implementing memory 'sha256_transform_k_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_transform_m_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'sha256_update_p_str_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'main_ctx_data_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'main_hash_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:40 . Memory (MB): peak = 208.031 ; gain = 116.461
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-112] Total elapsed time: 40.214 seconds; peak allocated memory: 138.333 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+WARNING: [HLS 200-40] sha256/main.c:1:9: fatal error: 'header.h' file not found
+#include<header.h>
+        ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 185.074 ; gain = 93.547
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 185.074 ; gain = 93.547
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 185.074 ; gain = 93.547
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main_fn' (sha256/main.c:127) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 185.074 ; gain = 93.547
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (sha256/main.c:2).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-3' (sha256/main.c:22) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (sha256/main.c:5) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (sha256/main.c:9) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (sha256/main.c:22) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (sha256/main.c:3) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ctx.state' (sha256/main.c:125) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (sha256/main.c:2)...601 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:35 . Memory (MB): peak = 185.074 ; gain = 93.547
+WARNING: [HLS 200-466] Port 'output'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [XFORM 203-631] Renaming function 'calculateStringLength' to 'calculateStringLengt' (sha256/main.c:114:5)
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'data' (sha256/main.c:62:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 217.098 ; gain = 125.570
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main_fn' ...
+WARNING: [SYN 201-107] Renaming port name 'main_fn/input' to 'main_fn/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'main_fn/output' to 'main_fn/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calculateStringLengt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 56.543 seconds; current allocated memory: 162.605 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 162.698 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_load_2', sha256/main.c:6) on array 'data' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 32, Depth = 107.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.377 seconds; current allocated memory: 171.005 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.118 seconds; current allocated memory: 182.408 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 32, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln62', sha256/main.c:62) of variable 'data_addr_read', sha256/main.c:62 on array 'ctx_data'.
+WARNING: [SCHED 204-62] II = 33 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 34 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 35 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 36 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 37 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 40 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 44 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 45 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 46 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 47 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 48 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 49 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 50 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 51 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 52 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 53 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 54 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 55 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 56 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 57 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 58 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 59 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 60 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 61 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 62 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 63 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 64, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln62', sha256/main.c:62) of variable 'data_addr_read', sha256/main.c:62 on array 'ctx_data'.
+WARNING: [SCHED 204-62] II = 65 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 66 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 67 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 68 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 69 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 70 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 71 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 72 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 73 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 74 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 75 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 76 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 77 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 78 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 79 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 80 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 81 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 82 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 83 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 84 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 85 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 86 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 87 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 88 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 89 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 90 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 91 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 92 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 93 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 94 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 95 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 96, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln62', sha256/main.c:62) of variable 'data_addr_read', sha256/main.c:62 on array 'ctx_data'.
+WARNING: [SCHED 204-62] II = 97 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 98 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 99 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 100 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 101 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 102 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 103 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 104 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 105 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 106 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 107, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:65) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln62', sha256/main.c:62) of variable 'data_addr_read', sha256/main.c:62 on array 'ctx_data'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 108, Depth = 110.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.762 seconds; current allocated memory: 184.179 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.754 seconds; current allocated memory: 185.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+WARNING: [SCHED 204-69] Unable to schedule bus request on port 'hash' (sha256/main.c:103) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 15.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.785 seconds; current allocated memory: 187.565 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.287 seconds; current allocated memory: 190.162 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.429 seconds; current allocated memory: 191.324 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.781 seconds; current allocated memory: 193.079 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calculateStringLengt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calculateStringLengt'.
+INFO: [HLS 200-111]  Elapsed time: 2.303 seconds; current allocated memory: 195.388 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 1.376 seconds; current allocated memory: 216.735 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 9.898 seconds; current allocated memory: 226.000 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 2.079 seconds; current allocated memory: 230.213 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main_fn' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r' and 'output_r' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main_fn'.
+INFO: [HLS 200-111]  Elapsed time: 2.51 seconds; current allocated memory: 232.557 MB.
+INFO: [RTMG 210-278] Implementing memory 'main_fn_ctx_data_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:58 ; elapsed = 00:01:44 . Memory (MB): peak = 366.273 ; gain = 274.746
+INFO: [VHDL 208-304] Generating VHDL RTL for main_fn.
+INFO: [VLOG 209-307] Generating Verilog RTL for main_fn.
+INFO: [HLS 200-112] Total elapsed time: 104.411 seconds; peak allocated memory: 232.557 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.383 ; gain = 92.848
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.383 ; gain = 92.848
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.383 ; gain = 92.848
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main_fn' (sha256/main.c:128) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.383 ; gain = 92.848
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (sha256/main.c:2).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1' (sha256/main.c:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (sha256/main.c:10) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (sha256/main.c:5) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (sha256/main.c:10) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (sha256/main.c:24) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (sha256/main.c:3) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ctx.state' (sha256/main.c:126) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (sha256/main.c:2)...601 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 184.383 ; gain = 92.848
+WARNING: [HLS 200-466] Port 'output'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [XFORM 203-631] Renaming function 'calculateStringLength' to 'calculateStringLengt' (sha256/main.c:115:5)
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'data' (sha256/main.c:63:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 217.039 ; gain = 125.504
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main_fn' ...
+WARNING: [SYN 201-107] Renaming port name 'main_fn/input' to 'main_fn/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'main_fn/output' to 'main_fn/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calculateStringLengt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.746 seconds; current allocated memory: 162.608 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 162.702 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_load_2', sha256/main.c:7) on array 'data' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 32, Depth = 107.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.209 seconds; current allocated memory: 171.011 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.16 seconds; current allocated memory: 182.415 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 32, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln63', sha256/main.c:63) of variable 'data_addr_read', sha256/main.c:63 on array 'ctx_data'.
+WARNING: [SCHED 204-62] II = 33 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 34 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 35 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 36 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 37 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 38 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 39 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 40 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 41 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 42 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 43 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 44 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 45 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 46 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 47 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 48 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 49 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 50 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 51 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 52 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 53 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 54 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 55 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 56 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 57 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 58 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 59 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 60 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 61 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 62 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 63 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 64, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln63', sha256/main.c:63) of variable 'data_addr_read', sha256/main.c:63 on array 'ctx_data'.
+WARNING: [SCHED 204-62] II = 65 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 66 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 67 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 68 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 69 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 70 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 71 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 72 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 73 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 74 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 75 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 76 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 77 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 78 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 79 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 80 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 81 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 82 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 83 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 84 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 85 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 86 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 87 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 88 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 89 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 90 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 91 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 92 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 93 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 94 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 95 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 96, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln63', sha256/main.c:63) of variable 'data_addr_read', sha256/main.c:63 on array 'ctx_data'.
+WARNING: [SCHED 204-62] II = 97 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 98 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 99 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 100 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 101 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 102 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 103 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 104 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 105 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-62] II = 106 is infeasible due to multiple pipeline iteration latency = 107 and incompatible II = 32 of 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform'.
+WARNING: [SCHED 204-68] The II Violation in module 'sha256_update' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 107, distance = 1, offset = 1)
+   between 'call' operation ('call_ret', sha256/main.c:66) to 'sha256_transform' and 'store' operation ('ctx_data_addr_write_ln63', sha256/main.c:63) of variable 'data_addr_read', sha256/main.c:63 on array 'ctx_data'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 108, Depth = 110.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.62 seconds; current allocated memory: 184.186 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.732 seconds; current allocated memory: 185.506 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+WARNING: [SCHED 204-69] Unable to schedule bus request on port 'hash' (sha256/main.c:104) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 15.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.765 seconds; current allocated memory: 187.572 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.17 seconds; current allocated memory: 190.169 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.438 seconds; current allocated memory: 191.330 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.764 seconds; current allocated memory: 193.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calculateStringLengt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calculateStringLengt'.
+INFO: [HLS 200-111]  Elapsed time: 2.151 seconds; current allocated memory: 195.394 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 1.674 seconds; current allocated memory: 216.741 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 9.278 seconds; current allocated memory: 226.003 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 1.962 seconds; current allocated memory: 230.216 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main_fn' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r' and 'output_r' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main_fn'.
+INFO: [HLS 200-111]  Elapsed time: 2.329 seconds; current allocated memory: 232.561 MB.
+INFO: [RTMG 210-278] Implementing memory 'main_fn_ctx_data_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:58 ; elapsed = 00:01:18 . Memory (MB): peak = 366.129 ; gain = 274.594
+INFO: [VHDL 208-304] Generating VHDL RTL for main_fn.
+INFO: [VLOG 209-307] Generating Verilog RTL for main_fn.
+INFO: [HLS 200-112] Total elapsed time: 77.829 seconds; peak allocated memory: 232.561 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sha256/main.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.215 ; gain = 93.473
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.215 ; gain = 93.473
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.215 ; gain = 93.473
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'main_fn' (sha256/main.c:128) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 185.215 ; gain = 93.473
+INFO: [XFORM 203-102] Partitioning array 'ctx.state' (sha256/main.c:126) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (sha256/main.c:2)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 185.215 ; gain = 93.473
+WARNING: [HLS 200-466] Port 'output'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [XFORM 203-631] Renaming function 'calculateStringLength' to 'calculateStringLengt' (sha256/main.c:115:5)
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'data' (sha256/main.c:63:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 192.277 ; gain = 100.535
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main_fn' ...
+WARNING: [SYN 201-107] Renaming port name 'main_fn/input' to 'main_fn/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'main_fn/output' to 'main_fn/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calculateStringLengt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.8 seconds; current allocated memory: 142.045 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.176 seconds; current allocated memory: 142.139 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.214 seconds; current allocated memory: 142.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.233 seconds; current allocated memory: 143.178 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.518 seconds; current allocated memory: 143.426 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 143.732 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+WARNING: [SCHED 204-69] Unable to schedule bus request on port 'hash' (sha256/main.c:104) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 15.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.453 seconds; current allocated memory: 144.303 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 145.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.598 seconds; current allocated memory: 145.179 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.259 seconds; current allocated memory: 145.397 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calculateStringLengt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calculateStringLengt'.
+INFO: [HLS 200-111]  Elapsed time: 0.365 seconds; current allocated memory: 145.799 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 146.935 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 0.476 seconds; current allocated memory: 148.073 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 0.407 seconds; current allocated memory: 149.683 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'main_fn/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main_fn' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r' and 'output_r' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main_fn'.
+INFO: [HLS 200-111]  Elapsed time: 0.937 seconds; current allocated memory: 151.240 MB.
+INFO: [RTMG 210-279] Implementing memory 'sha256_transform_k_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_transform_m_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'main_fn_ctx_data_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 221.320 ; gain = 129.578
+INFO: [VHDL 208-304] Generating VHDL RTL for main_fn.
+INFO: [VLOG 209-307] Generating Verilog RTL for main_fn.
+INFO: [HLS 200-112] Total elapsed time: 18.209 seconds; peak allocated memory: 151.240 MB.

@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vivado HLS Report for 'calculateStringLengt'
+================================================================
+* Date:           Wed Nov 29 19:46:05 2023
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        sha256
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|        10|          -|          -|     ?|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    153|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     80|    -|
+|Register         |        -|      -|     179|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     179|    233|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |add_ln115_fu_68_p2   |     +    |      0|  0|  71|          64|          64|
+    |length_fu_84_p2      |     +    |      0|  0|  71|          64|           1|
+    |icmp_ln115_fu_79_p2  |   icmp   |      0|  0|  11|           8|           1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0| 153|         136|          66|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm        |  53|         12|    1|         12|
+    |length_0_reg_52  |   9|          2|   64|        128|
+    |str_blk_n_AR     |   9|          2|    1|          2|
+    |str_blk_n_R      |   9|          2|    1|          2|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            |  80|         18|   67|        144|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |ap_CS_fsm              |  11|   0|   11|          0|
+    |length_0_reg_52        |  64|   0|   64|          0|
+    |sext_ln115_reg_90      |  64|   0|   64|          0|
+    |str_addr_read_reg_101  |   8|   0|    8|          0|
+    |str_addr_reg_95        |  32|   0|   32|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  | 179|   0|  179|          0|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+----------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | calculateStringLengt | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | calculateStringLengt | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | calculateStringLengt | return value |
+|ap_done             | out |    1| ap_ctrl_hs | calculateStringLengt | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | calculateStringLengt | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | calculateStringLengt | return value |
+|ap_return           | out |   64| ap_ctrl_hs | calculateStringLengt | return value |
+|m_axi_str_AWVALID   | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWREADY   |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWADDR    | out |   32|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWID      | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWLEN     | out |   32|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWSIZE    | out |    3|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWBURST   | out |    2|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWLOCK    | out |    2|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWCACHE   | out |    4|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWPROT    | out |    3|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWQOS     | out |    4|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWREGION  | out |    4|    m_axi   |          str         |    pointer   |
+|m_axi_str_AWUSER    | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_WVALID    | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_WREADY    |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_WDATA     | out |    8|    m_axi   |          str         |    pointer   |
+|m_axi_str_WSTRB     | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_WLAST     | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_WID       | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_WUSER     | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARVALID   | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARREADY   |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARADDR    | out |   32|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARID      | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARLEN     | out |   32|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARSIZE    | out |    3|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARBURST   | out |    2|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARLOCK    | out |    2|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARCACHE   | out |    4|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARPROT    | out |    3|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARQOS     | out |    4|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARREGION  | out |    4|    m_axi   |          str         |    pointer   |
+|m_axi_str_ARUSER    | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_RVALID    |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_RREADY    | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_RDATA     |  in |    8|    m_axi   |          str         |    pointer   |
+|m_axi_str_RLAST     |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_RID       |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_RUSER     |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_RRESP     |  in |    2|    m_axi   |          str         |    pointer   |
+|m_axi_str_BVALID    |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_BREADY    | out |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_BRESP     |  in |    2|    m_axi   |          str         |    pointer   |
+|m_axi_str_BID       |  in |    1|    m_axi   |          str         |    pointer   |
+|m_axi_str_BUSER     |  in |    1|    m_axi   |          str         |    pointer   |
+|str_offset          |  in |   32|   ap_none  |      str_offset      |    scalar    |
++--------------------+-----+-----+------------+----------------------+--------------+
+

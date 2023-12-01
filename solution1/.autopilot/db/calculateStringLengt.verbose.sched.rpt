@@ -1,0 +1,209 @@
+
+
+================================================================
+== Vivado HLS Report for 'calculateStringLengt'
+================================================================
+* Date:           Wed Nov 29 19:46:02 2023
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        sha256
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|        10|          -|          -|     ?|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %str, [6 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 5, [5 x i8]* @p_str4, [6 x i8]* @p_str5, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%str_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %str_offset)" [sha256/main.c:113]   --->   Operation 13 'read' 'str_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln115 = sext i32 %str_offset_read to i64" [sha256/main.c:115]   --->   Operation 14 'sext' 'sext_ln115' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.76ns)   --->   "br label %1" [sha256/main.c:115]   --->   Operation 15 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.52>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%length_0 = phi i64 [ 0, %0 ], [ %length, %1 ]"   --->   Operation 16 'phi' 'length_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (3.52ns)   --->   "%add_ln115 = add i64 %length_0, %sext_ln115" [sha256/main.c:115]   --->   Operation 17 'add' 'add_ln115' <Predicate = true> <Delay = 3.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%str_addr = getelementptr i8* %str, i64 %add_ln115" [sha256/main.c:115]   --->   Operation 18 'getelementptr' 'str_addr' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 8.75>
+ST_3 : Operation 19 [7/7] (8.75ns)   --->   "%str_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %str_addr, i32 1)" [sha256/main.c:115]   --->   Operation 19 'readreq' 'str_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 8.75>
+ST_4 : Operation 20 [6/7] (8.75ns)   --->   "%str_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %str_addr, i32 1)" [sha256/main.c:115]   --->   Operation 20 'readreq' 'str_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 8.75>
+ST_5 : Operation 21 [5/7] (8.75ns)   --->   "%str_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %str_addr, i32 1)" [sha256/main.c:115]   --->   Operation 21 'readreq' 'str_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 8.75>
+ST_6 : Operation 22 [4/7] (8.75ns)   --->   "%str_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %str_addr, i32 1)" [sha256/main.c:115]   --->   Operation 22 'readreq' 'str_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 8.75>
+ST_7 : Operation 23 [3/7] (8.75ns)   --->   "%str_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %str_addr, i32 1)" [sha256/main.c:115]   --->   Operation 23 'readreq' 'str_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 8.75>
+ST_8 : Operation 24 [2/7] (8.75ns)   --->   "%str_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %str_addr, i32 1)" [sha256/main.c:115]   --->   Operation 24 'readreq' 'str_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 8.75>
+ST_9 : Operation 25 [1/7] (8.75ns)   --->   "%str_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %str_addr, i32 1)" [sha256/main.c:115]   --->   Operation 25 'readreq' 'str_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 8.75>
+ST_10 : Operation 26 [1/1] (8.75ns)   --->   "%str_addr_read = call i8 @_ssdm_op_Read.m_axi.i8P(i8* %str_addr)" [sha256/main.c:115]   --->   Operation 26 'read' 'str_addr_read' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 3.52>
+ST_11 : Operation 27 [1/1] (1.55ns)   --->   "%icmp_ln115 = icmp eq i8 %str_addr_read, 0" [sha256/main.c:115]   --->   Operation 27 'icmp' 'icmp_ln115' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 28 [1/1] (3.52ns)   --->   "%length = add i64 %length_0, 1" [sha256/main.c:116]   --->   Operation 28 'add' 'length' <Predicate = true> <Delay = 3.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 29 [1/1] (0.00ns)   --->   "br i1 %icmp_ln115, label %2, label %1" [sha256/main.c:115]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 30 [1/1] (0.00ns)   --->   "ret i64 %length_0" [sha256/main.c:118]   --->   Operation 30 'ret' <Predicate = (icmp_ln115)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('length') with incoming values : ('length', sha256/main.c:116) [8]  (1.77 ns)
+
+ <State 2>: 3.52ns
+The critical path consists of the following:
+	'phi' operation ('length') with incoming values : ('length', sha256/main.c:116) [8]  (0 ns)
+	'add' operation ('add_ln115', sha256/main.c:115) [9]  (3.52 ns)
+
+ <State 3>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'str' (sha256/main.c:115) [11]  (8.75 ns)
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'str' (sha256/main.c:115) [11]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'str' (sha256/main.c:115) [11]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'str' (sha256/main.c:115) [11]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'str' (sha256/main.c:115) [11]  (8.75 ns)
+
+ <State 8>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'str' (sha256/main.c:115) [11]  (8.75 ns)
+
+ <State 9>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'str' (sha256/main.c:115) [11]  (8.75 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'str' (sha256/main.c:115) [12]  (8.75 ns)
+
+ <State 11>: 3.52ns
+The critical path consists of the following:
+	'add' operation ('length', sha256/main.c:116) [14]  (3.52 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
